@@ -15,7 +15,7 @@ To create a new payment, make a `POST` request to the API endpoint.
 ### Request (cURL)
 
 ```bash
-curl -X POST https://api-pay.sumopod.com/payments \
+curl -X POST https://api-pay.sumopod.com/api/v1/payments \
   -H "Content-Type: application/json" \
   -H "X-Api-Key: YOUR_API_KEY" \
   -d '{
@@ -23,8 +23,8 @@ curl -X POST https://api-pay.sumopod.com/payments \
     "amount": 50000,
     "currency": "IDR",
     "expires_in_hours": 24,
-    "success_return_url": "https://your-site.com/success",
-    "cancel_return_url": "https://your-site.com/cancel",
+    "success_return_url": "https://yourapp.com/success",
+    "cancel_return_url": "https://yourapp.com/cancel",
     "payment_method_type_code": "QRIS"
   }'
 ```
